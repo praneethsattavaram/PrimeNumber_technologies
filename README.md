@@ -1,52 +1,94 @@
-Web Scraping Script for HPRERA Public Dashboard
 
-Overview
+# Web Scraping Script for HPRERA Public Dashboard
 
-This script uses Selenium WebDriver to scrape project details from the HPRERA Public Dashboard. It extracts GSTIN numbers, PAN numbers, names, and permanent addresses of projects and saves them to a CSV file.
+## 📖 Overview
 
-Requirements
+This script utilizes **Selenium WebDriver** to extract project details from the HPRERA Public Dashboard. The extracted data includes:  
+- GSTIN Numbers  
+- PAN Numbers  
+- Project Names  
+- Permanent Addresses  
 
-•⁠  ⁠Python 3.x
-•⁠  ⁠Selenium WebDriver (Chrome)
-•⁠  ⁠csv module
+The scraped data is saved into a CSV file for easy access and analysis.
 
-Installation
+---
 
-1.⁠ ⁠Install Selenium using pip: ⁠ pip install selenium ⁠
-2.⁠ ⁠Download ChromeDriver (compatible with your Chrome version) from (link unavailable)
-3.⁠ ⁠Update the ⁠ webdriver.Chrome() ⁠ line to point to the downloaded ChromeDriver executable
+## 🛠️ Requirements
 
-Usage
+Ensure the following are installed and available:
+- **Python 3.x**
+- **Selenium WebDriver (Chrome)**
+- **csv module** (built-in with Python)
 
-1.⁠ ⁠Run the script using Python: ⁠ python main.py ⁠
-2.⁠ ⁠The script will open a Chrome browser window and start scraping project details
-3.⁠ ⁠The scraped data will be saved to a CSV file named ⁠ project_details.csv ⁠
+---
 
-CSV File Structure
+## 🚀 Installation
 
-The CSV file contains the following columns:
+### 1️⃣ Install Selenium  
+Run the following command in your terminal to install Selenium:
 
-| Column Name | Description |
-| --- | --- |
-| GSTIN No | GSTIN number of the project |
-| PAN No | PAN number of the project |
-| Name | Name of the project |
-| Permanent Address | Permanent address of the project |
+```bash
+pip install selenium
 
-Troubleshooting
 
-•⁠  ⁠Ensure ChromeDriver is in the system's PATH or update the ⁠ webdriver.Chrome() ⁠ line
-•⁠  ⁠Check for any updates to the HPRERA Public Dashboard that may affect the script's functionality
+### 2️⃣ Download ChromeDriver  
+Download a ChromeDriver version compatible with your Chrome browser from the [ChromeDriver website](https://sites.google.com/chromium.org/driver/).
 
-Contributing
+### 3️⃣ Update ChromeDriver Path  
+Ensure the `webdriver.Chrome()` line in the script points to the path of your downloaded ChromeDriver executable.
 
-Contributions are welcome! If you find any issues or have suggestions, please open an issue or submit a pull request.
+---
 
-License
+## 🖥️ Usage
 
-This script is released under the MIT License.
+1. Run the script using Python:
+   ```bash
+   python main.py
+   ```
+2. The script will:
+   - Open a Chrome browser window.
+   - Scrape project details from the HPRERA Public Dashboard.
+3. Extracted data will be saved in a CSV file named `project_details.csv`.
 
-Acknowledgments
+---
 
-•⁠  ⁠Selenium WebDriver for Python
-•⁠  ⁠HPRERA Public Dashboard for providing the data
+## 📂 CSV File Structure
+
+The output file `project_details.csv` will have the following structure:
+
+| Column Name         | Description                            |
+|---------------------|----------------------------------------|
+| **GSTIN No**        | GSTIN number of the project           |
+| **PAN No**          | PAN number of the project             |
+| **Name**            | Name of the project                  |
+| **Permanent Address** | Permanent address of the project     |
+
+---
+
+## 🛠️ Troubleshooting
+
+- **ChromeDriver Path**: Ensure ChromeDriver is added to your system's PATH or update the `webdriver.Chrome()` line in the script to the correct path.  
+- **Dashboard Changes**: If the HPRERA Public Dashboard is updated, it may affect script functionality. Review and adjust the scraping logic if necessary.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+If you find issues or have suggestions for improvement, feel free to:  
+- Open an issue
+- Submit a pull request
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙌 Acknowledgments
+
+Special thanks to:
+- **Selenium WebDriver for Python**
+- **HPRERA Public Dashboard** for providing accessible project data
